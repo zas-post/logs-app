@@ -8,6 +8,10 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+ENV PORT 3000
+
+EXPOSE $PORT
+
+# EXPOSE 3000 < - - или так
 
 CMD ["node", "app.js"]
